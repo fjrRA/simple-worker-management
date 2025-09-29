@@ -38,7 +38,7 @@ async function loadAll() {
 async function doSearch() {
   const q = $('q').value.trim();
   if (!q) { render(rows); return; }
-  const res = await api(`/divisi/search?nama_div=${encodeURIComponent(q)}`);
+  const res = await api(`/divisi/search?nama=${encodeURIComponent(q)}`);
   if (!res.success) { toast(false, res.error || 'Gagal cari'); return; }
   render(res.data);
   toast(true, res.total ? `OK: ${res.total} baris cocok` : 'Divisi tidak ditemukan');
