@@ -10,6 +10,11 @@
   width: 120px
 }
 
+.nav-flex {
+  display: flex;
+  gap: 8px;
+}
+
 :root {
   --bg: #0b1020;
   --card: #121a34;
